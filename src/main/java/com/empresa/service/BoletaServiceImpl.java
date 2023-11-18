@@ -38,7 +38,7 @@ public class BoletaServiceImpl implements BoletaService{
 	}
 
 	@Override
-	@Transactional
+	@Transactional //Permite ejecutar una transacción
 	public Boleta insertaBoleta(Boleta obj) {
 		Boleta cabecera = boletaRepository.save(obj);
 		for (BoletaHasProducto d : cabecera.getDetallesBoleta()) {
